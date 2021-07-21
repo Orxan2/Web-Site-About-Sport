@@ -1,8 +1,8 @@
 @import "colors";
 @import "reset";
 @import 'buttons';
-body {
-   
+
+body {   
     header {
         position: absolute;
         width: 100%;
@@ -74,7 +74,6 @@ body {
             }
         }
     }
-
     section#home {
         background-image: url(../img/header-logo.jpg);
         min-height: 100vh;
@@ -153,25 +152,32 @@ body {
        background-size: cover;
      }
     }
-}
-section#team{
-    background-color:  $bg-dark;
-    .card{
-        .card-body{
-            p{
-                padding: 0 7rem;
+    section#team{
+        background-color:  $bg-dark;
+        .card{
+            .card-body{
+                p{
+                    padding: 0 7rem;
+                }
             }
-        }
-        .card-footer{
-            .btn-group{
-                @extend %btn-group;
-                // margin: 0;
-                    }
+            .card-footer{
+                .btn-group{
+                    @extend %btn-group;
+                    // margin: 0;
+                        }
+            }
+            
         }
         
+    }    
+    section#clients{
+        background-color:  $bg-dark;
+       
+        li{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
     }
-    
 }
-// .orxan{
-//     @extend %btn-group;
-// }
+

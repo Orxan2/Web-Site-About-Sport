@@ -15,11 +15,11 @@ ul, ol {
   list-style: none;
 }
 
-body section#home .slogan-container .btn-group, section#team .card .card-footer .btn-group {
+body section#home .slogan-container .btn-group, body section#team .card .card-footer .btn-group {
   margin: 100px 0;
 }
 
-body section#home .slogan-container .btn-group .leftBtn, section#team .card .card-footer .btn-group .leftBtn {
+body section#home .slogan-container .btn-group .leftBtn, body section#team .card .card-footer .btn-group .leftBtn {
   background-color: white;
   color: #222;
   font-weight: 700;
@@ -30,12 +30,12 @@ body section#home .slogan-container .btn-group .leftBtn, section#team .card .car
   transition: all 0.5s;
 }
 
-body section#home .slogan-container .btn-group .leftBtn:hover, section#team .card .card-footer .btn-group .leftBtn:hover {
+body section#home .slogan-container .btn-group .leftBtn:hover, body section#team .card .card-footer .btn-group .leftBtn:hover {
   background-color: #646464;
   color: white;
 }
 
-body section#home .slogan-container .btn-group .rightBtn, section#team .card .card-footer .btn-group .rightBtn {
+body section#home .slogan-container .btn-group .rightBtn, body section#team .card .card-footer .btn-group .rightBtn {
   background-color: #feca57;
   color: #222;
   font-weight: 700;
@@ -169,11 +169,21 @@ body section#about .col-8 {
   background-size: cover;
 }
 
-section#team {
+body section#team {
   background-color: #2d2e2d;
 }
 
-section#team .card .card-body p {
+body section#team .card .card-body p {
   padding: 0 7rem;
+}
+
+body section#clients {
+  background-color: #2d2e2d;
+}
+
+body section#clients li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
