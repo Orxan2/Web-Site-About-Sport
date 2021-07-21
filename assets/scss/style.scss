@@ -1,0 +1,177 @@
+@import "colors";
+@import "reset";
+@import 'buttons';
+body {
+   
+    header {
+        position: absolute;
+        width: 100%;
+        // background-image: url(../img/header-logo.jpg);
+        // min-height: 100vh;
+        background: linear-gradient(to bottom, #00000090, transparent);
+        // background-color: transparent;
+        background-blend-mode: color-burn;
+        // background-position: center;
+        // background-attachment: fixed;
+        .col-8 {
+            a {
+                font-weight: 700;
+                letter-spacing: 2px;
+                font-size: 14px;
+            }
+
+            .nav-btn {
+                a {
+                    color: white;
+                }
+                .user {
+                    &__text {
+                        transition: opacity 0.7s;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: $myGold;
+                    }
+                    .user {
+                        &__text {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+            .active,
+            .user {
+                a {
+                    color: $myGold;
+                }
+            }
+            .user {
+                a {
+                    font-size: 16px;
+                    i {
+                        color: $myGold;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+
+            &__font {
+                color: white;
+                text-transform: uppercase;
+                font-weight: 900;
+                letter-spacing: 2px;
+                line-height: 1.2;
+
+                i {
+                    color: $myGold;
+                }
+            }
+        }
+    }
+
+    section#home {
+        background-image: url(../img/header-logo.jpg);
+        min-height: 100vh;
+        background-color: #000000b5;
+        background-blend-mode: color-burn;
+        background-position: center;
+        
+        background-size: cover;
+        // background-attachment: ;
+        background-repeat: no-repeat;
+        vertical-align: baseline;
+        display: flex;
+        align-items: center;
+
+        .slogan-container {
+            margin: 100px 0;
+            .slogan {
+                &__script {
+                    color: white;
+                    font-size: 125px;
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    line-height: 1;
+                }
+            }
+            .sub-slogan {
+                &__script {
+                    color: $myGold;
+                    font-size: 50px;
+                    letter-spacing: 2px;
+                }
+            }
+           
+            .btn-group {
+                @extend %btn-group;
+            }
+        }
+    }
+    section#about {        
+       
+        background-color: $bg-about;
+        min-height: 100vh;
+
+        .my-card {            
+            &__header {
+                border-bottom: 1px solid $bg-line;                
+                position: relative;
+                padding: 10px 0;
+                margin: 20px 0;
+
+                &::after {
+                    content: "";
+                    height: 10px;
+                    width: 60%;
+                    background-color: $bg-line;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+            &__body{
+                p{
+// color: $bg-line/;
+                }
+            }
+        }
+
+     .col-8{
+           background-image: url(../img/3.jpg);
+        min-height: 100vh;
+        background-color: #000000b5;
+        background-blend-mode: color-burn;        
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      background-position: center;
+       background-size: cover;
+     }
+    }
+}
+section#team{
+    background-color:  $bg-dark;
+    .card{
+        .card-body{
+            p{
+                padding: 0 7rem;
+            }
+        }
+        .card-footer{
+            .btn-group{
+                @extend %btn-group;
+                // margin: 0;
+                    }
+        }
+        
+    }
+    
+}
+// .orxan{
+//     @extend %btn-group;
+// }
