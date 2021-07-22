@@ -45,6 +45,25 @@ body section#home .slogan-container .btn-group .rightBtn, body section#team .car
   letter-spacing: 2px;
 }
 
+body section#team .heading, body section#clients .heading, body section#services .heading {
+  border-bottom: 1px solid #a69494;
+  position: relative;
+  padding: 10px 0;
+  margin: 100px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 0 2px white;
+}
+
+body section#team .heading::after, body section#clients .heading::after, body section#services .heading::after {
+  content: "";
+  height: 10px;
+  width: 30%;
+  background-color: #a69494;
+  position: absolute;
+  bottom: 0;
+}
+
 body header {
   position: absolute;
   width: 100%;
@@ -171,6 +190,7 @@ body section#about .col-8 {
 
 body section#team {
   background-color: #2d2e2d;
+  padding: 50px 0;
 }
 
 body section#team .card .card-body p {
@@ -179,11 +199,78 @@ body section#team .card .card-body p {
 
 body section#clients {
   background-color: #2d2e2d;
+  padding: 50px 0;
 }
 
 body section#clients li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body section#services {
+  background-color: #5a363a;
+  padding: 50px 0;
+}
+
+body section#services .heading a.btn {
+  background-color: #feca57;
+  color: #2d2e2d;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  transition: background-color .2s linear;
+}
+
+body section#services .heading a.btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+body section#services .card-header {
+  position: relative;
+}
+
+body section#services .card-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: background-color .2s linear;
+}
+
+body section#services .card-header:hover::after {
+  background-color: #00000030;
+  background-blend-mode: color-burn;
+}
+
+body section#services .card-body {
+  border-bottom: 1px solid #a69494;
+}
+
+body section#services .card-body a {
+  font-size: 14px;
+  transition: opacity .2s linear;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+body section#services .card-body a:hover {
+  opacity: .5;
+}
+
+body section#services .card-footer a {
+  background-color: #feca57;
+  color: #2d2e2d;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  transition: opacity .2s linear;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+body section#services .card-footer a:hover {
+  opacity: .7;
 }
 /*# sourceMappingURL=style.css.map */

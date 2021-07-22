@@ -25,3 +25,21 @@
         letter-spacing: 2px;
     }
 }
+
+%heading{
+    border-bottom: 1px solid $bg-line;                
+    position: relative;
+    padding: 10px 0;
+    margin: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 2px white;
+        &::after{
+        content: "";
+                    height: 10px;
+                    width: 30%;
+                    background-color: $bg-line;
+                    position: absolute;
+                    bottom: 0
+    }
+}

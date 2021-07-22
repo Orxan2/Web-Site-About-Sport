@@ -154,6 +154,8 @@ body {
     }
     section#team{
         background-color:  $bg-dark;
+        padding: 50px 0;
+
         .card{
             .card-body{
                 p{
@@ -168,16 +170,105 @@ body {
             }
             
         }
+
+        .heading{
+            @extend %heading;            
+         }
         
     }    
     section#clients{
         background-color:  $bg-dark;
-       
+        padding: 50px 0;
+
         li{
            display: flex;
            justify-content: center;
            align-items: center;
         }
+
+        .heading{
+           @extend %heading;
+        }
     }
+section#services{
+    background-color: $bg-services;
+    padding: 50px 0;
+
+    .heading{
+        @extend %heading;
+
+        a.btn{
+            background-color: $myGold;
+            color: $bg-dark;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            transition: background-color .2s linear;
+
+            &:hover{
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+
+    .card{
+
+        &-header{
+           
+           position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                transition: background-color .2s linear;
+
+               
+            }
+
+            &:hover{
+                
+                &::after{
+                    background-color: #00000030;
+           background-blend-mode: color-burn;
+                }
+            }
+           
+            
+        }
+        &-body{
+            border-bottom: 1px solid $bg-line;
+            a{
+            font-size: 14px;
+            transition: opacity .2s linear;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            &:hover{
+                opacity: .5;
+            }
+            }
+        }
+        &-footer{
+            a{
+                background-color: $myGold;
+            color: $bg-dark;
+            padding: 0.5rem 1rem;
+            font-weight: 700;
+            transition: opacity .2s linear;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            
+
+            &:hover{
+                opacity: .7;
+            }
+            }
+        }
+    }
+}
 }
 
