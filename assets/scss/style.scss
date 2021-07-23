@@ -1,8 +1,8 @@
 @import "colors";
 @import "reset";
-@import 'buttons';
+@import "buttons";
 
-body {   
+body {
     header {
         position: absolute;
         width: 100%;
@@ -80,7 +80,7 @@ body {
         background-color: #000000b5;
         background-blend-mode: color-burn;
         background-position: center;
-        
+
         background-size: cover;
         // background-attachment: ;
         background-repeat: no-repeat;
@@ -107,20 +107,19 @@ body {
                     letter-spacing: 2px;
                 }
             }
-           
+
             .btn-group {
                 @extend %btn-group;
             }
         }
     }
-    section#about {        
-       
+    section#about {
         background-color: $bg-about;
         min-height: 100vh;
 
-        .my-card {            
+        .my-card {
             &__header {
-                border-bottom: 1px solid $bg-line;                
+                border-bottom: 1px solid $bg-line;
                 position: relative;
                 padding: 10px 0;
                 margin: 20px 0;
@@ -134,141 +133,203 @@ body {
                     bottom: 0;
                 }
             }
-            &__body{
-                p{
-// color: $bg-line/;
+            &__body {
+                p {
+                    // color: $bg-line/;
                 }
             }
         }
 
-     .col-8{
-           background-image: url(../img/3.jpg);
-        min-height: 100vh;
-        background-color: #000000b5;
-        background-blend-mode: color-burn;        
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      background-position: center;
-       background-size: cover;
-     }
+        .col-8 {
+            background-image: url(../img/3.jpg);
+            min-height: 100vh;
+            background-color: #000000b5;
+            background-blend-mode: color-burn;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
     }
-    section#team{
-        background-color:  $bg-dark;
+    section#team {
+        background-color: $bg-dark;
         padding: 50px 0;
 
-        .card{
-            .card-body{
-                p{
+        .card {
+            .card-body {
+                p {
                     padding: 0 7rem;
                 }
             }
-            .card-footer{
-                .btn-group{
+            .card-footer {
+                .btn-group {
                     @extend %btn-group;
                     // margin: 0;
-                        }
-            }
-            
-        }
-
-        .heading{
-            @extend %heading;            
-         }
-        
-    }    
-    section#clients{
-        background-color:  $bg-dark;
-        padding: 50px 0;
-
-        li{
-           display: flex;
-           justify-content: center;
-           align-items: center;
-        }
-
-        .heading{
-           @extend %heading;
-        }
-    }
-section#services{
-    background-color: $bg-services;
-    padding: 50px 0;
-
-    .heading{
-        @extend %heading;
-
-        a.btn{
-            background-color: $myGold;
-            color: $bg-dark;
-            padding: 1rem 2rem;
-            font-weight: 700;
-            transition: background-color .2s linear;
-
-            &:hover{
-                background-color: transparent;
-                color: white;
-            }
-        }
-    }
-
-    .card{
-
-        &-header{
-           
-           position: relative;
-
-            &::after{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                transition: background-color .2s linear;
-
-               
-            }
-
-            &:hover{
-                
-                &::after{
-                    background-color: #00000030;
-           background-blend-mode: color-burn;
                 }
             }
-           
-            
         }
-        &-body{
-            border-bottom: 1px solid $bg-line;
-            a{
-            font-size: 14px;
-            transition: opacity .2s linear;
-            letter-spacing: 2px;
-            text-transform: uppercase;
 
-            &:hover{
-                opacity: .5;
-            }
-            }
+        .heading {
+            @extend %heading;
         }
-        &-footer{
-            a{
+    }
+    section#clients {
+        background-color: $bg-dark;
+        padding: 50px 0;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading {
+            @extend %heading;
+        }
+    }
+    section#services {
+        background-color: $bg-services;
+        padding: 50px 0;
+
+        .heading {
+            @extend %heading;
+
+            a.btn {
                 background-color: $myGold;
-            color: $bg-dark;
-            padding: 0.5rem 1rem;
-            font-weight: 700;
-            transition: opacity .2s linear;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            
+                color: $bg-dark;
+                padding: 1rem 2rem;
+                font-weight: 700;
+                transition: background-color 0.2s linear;
 
-            &:hover{
-                opacity: .7;
+                &:hover {
+                    background-color: transparent;
+                    color: white;
+                }
             }
+        }
+
+        .card {
+            &-header {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    transition: background-color 0.2s linear;
+                }
+
+                &:hover {
+                    &::after {
+                        background-color: #00000030;
+                        background-blend-mode: color-burn;
+                    }
+                }
+            }
+            &-body {
+                border-bottom: 1px solid $bg-line;
+                a {
+                    font-size: 14px;
+                    transition: opacity 0.2s linear;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+            &-footer {
+                a {
+                    background-color: $myGold;
+                    color: $bg-dark;
+                    padding: 0.5rem 1rem;
+                    font-weight: 700;
+                    transition: opacity 0.2s linear;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    section#citations {
+        background-image: url(../img/football.webp);
+        min-height: 100vh;
+        width: 100%;
+        background-color: #000000b5;
+        background-blend-mode: color-burn;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .slogan-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            height: 100vh;
+            width: 1000px;
+            overflow: hidden;
+            left: 50%;
+            transform: translateX(-50%);
+            ul.slogan-wrapper {
+                height: 100%;
+                display: flex;
+                // align-items: center;
+                // justify-content: center;
+                position: absolute;
+                transition: all 0.5s linear;
+                left: 0;
+                .slogan {
+                    width: 1000px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+
+                    // padding: 0 50px;
+
+                    p {
+                        font-size: 27px;
+                        line-height: 1.4;
+                        text-align: center;
+                        width: 650px;
+                    }
+                    small {
+                        font-size: 18px;
+                        font-weight: 900;
+                        text-shadow: 0 0 1px white;
+                    }
+                }
+            }
+            a {
+                font-size: 50px;
+                position: relative;
+                z-index: 5;
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            a#previous {
+                position: absolute;
+                left: 0;
+                transform: translateX(100%);
+            }
+            a#next {
+                position: absolute;
+                right: 0;
             }
         }
     }
 }
-}
-

@@ -218,7 +218,7 @@ body section#services .heading a.btn {
   color: #2d2e2d;
   padding: 1rem 2rem;
   font-weight: 700;
-  transition: background-color .2s linear;
+  transition: background-color 0.2s linear;
 }
 
 body section#services .heading a.btn:hover {
@@ -231,13 +231,13 @@ body section#services .card-header {
 }
 
 body section#services .card-header::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  transition: background-color .2s linear;
+  transition: background-color 0.2s linear;
 }
 
 body section#services .card-header:hover::after {
@@ -251,13 +251,13 @@ body section#services .card-body {
 
 body section#services .card-body a {
   font-size: 14px;
-  transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 body section#services .card-body a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 body section#services .card-footer a {
@@ -265,12 +265,86 @@ body section#services .card-footer a {
   color: #2d2e2d;
   padding: 0.5rem 1rem;
   font-weight: 700;
-  transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 body section#services .card-footer a:hover {
-  opacity: .7;
+  opacity: 0.7;
+}
+
+body section#citations {
+  background-image: url(../img/football.webp);
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000b5;
+  background-blend-mode: color-burn;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section#citations .slogan-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 1000px;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body section#citations .slogan-container ul.slogan-wrapper {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  transition: all 0.5s linear;
+  left: 0;
+}
+
+body section#citations .slogan-container ul.slogan-wrapper .slogan {
+  width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+body section#citations .slogan-container ul.slogan-wrapper .slogan p {
+  font-size: 27px;
+  line-height: 1.4;
+  text-align: center;
+  width: 650px;
+}
+
+body section#citations .slogan-container ul.slogan-wrapper .slogan small {
+  font-size: 18px;
+  font-weight: 900;
+  text-shadow: 0 0 1px white;
+}
+
+body section#citations .slogan-container a {
+  font-size: 50px;
+  position: relative;
+  z-index: 5;
+}
+
+body section#citations .slogan-container a:focus {
+  box-shadow: none;
+}
+
+body section#citations .slogan-container a#previous {
+  position: absolute;
+  left: 0;
+  transform: translateX(100%);
+}
+
+body section#citations .slogan-container a#next {
+  position: absolute;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
